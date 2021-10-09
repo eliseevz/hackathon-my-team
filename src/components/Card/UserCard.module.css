@@ -1,0 +1,20 @@
+.userImg{
+	width: 49px;
+	height: 49px;
+	border-radius: 50%;
+    object-fit: fill;
+}
+
+.card:hover{
+	box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+}
+
+.card{
+	color: #fff;
+	min-height: 290px;
+	transition: all 0.3s ease;
+}
+
+.link{
+	text-decoration: none;
+}

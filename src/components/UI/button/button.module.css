@@ -1,0 +1,26 @@
+.myButton {
+    padding: 13px 25px;
+    padding-right: 10px;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.myButton.primary {
+    background: #3A51C5;
+    color: #fff;
+    border: none;
+}
+
+.buttonArrow {
+    opacity: 0;
+    transition: all 0.2s ease;
+    margin-left: 25px;
+}
+
+.myButton:hover .buttonArrow{
+    opacity: 1;
+}

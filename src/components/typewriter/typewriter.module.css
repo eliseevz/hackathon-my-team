@@ -1,6 +1,8 @@
 .mainPageText {
-    font-size: 36px;
+    font-size: 37px;
     color: #fff;
-    width: 45%;
+    width: 550px;
     text-align: left;
+    height: 320px;
+    word-break: break-word;
 }

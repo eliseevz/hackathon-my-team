@@ -1,0 +1,8 @@
+.countOfMembers {
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+
+.countOfMembers span {
+    font-weight: bold;
+}
