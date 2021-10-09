@@ -7,7 +7,7 @@ const UserCard = ({user}) => {
 	return ( 
 		<Link to={`/members/${user.id}`} className={classes.link} >
 		<div className={`card m-1 ${classes.card}`} style={{'width': '18rem', backgroundColor: '#2A283F'}}>
-			<div className='d-flex flex-row justify-content-between align-self-center' style={{width: '100%', padding: '1rem 1rem 0 1rem'}}>
+			<div className='d-flex flex-row justify-content-between align-self-center align-items-center' style={{width: '100%', padding: '1rem 1rem 0 1rem'}}>
 				<img className={`card-img-top ${classes.userImg} `} src={user.imageURL} alt="img"/>
 				<div className='d-flex flex-column align-items-start'>
 					<div className='d-flex flex-row mb-1'>

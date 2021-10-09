@@ -1,0 +1,7 @@
+.connectImage {
+    position: fixed;
+    width: 700px;
+    right: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+}

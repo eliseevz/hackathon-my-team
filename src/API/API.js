@@ -12,8 +12,10 @@ export let allMembers = [
     about: 'lorem',
     impact: 'lorem',
     stack: [
-      { name: 'HTML', prog: 20 },
-      { name: 'CSS', prog: 100 }
+      { name: 'HTML', prog: 99 },
+      { name: 'CSS', prog: 99 },
+      { name: 'React', prog: 70 },
+      { name: 'Typescript', prog: 30 },
     ],
     socialMedia: [
       { name: 'instagram', link: 'https:/....' },
@@ -21,7 +23,7 @@ export let allMembers = [
       { name: 'github', link: 'https:/....' },
       { name: 'linkedin', link: 'https:/....' }
     ],
-    imageURL: '...'
+    imageURL: 'http://cdn.onlinewebfonts.com/svg/img_252069.png'
   },
   {
     id: 1,
@@ -44,7 +46,7 @@ export let allMembers = [
       { name: 'github', link: 'https:/....' },
       { name: 'linkedin', link: 'https:/....' }
     ],
-    imageURL: '...'
+    imageURL: 'http://cdn.onlinewebfonts.com/svg/img_252069.png'
   },
   {
     id: 2,
@@ -67,7 +69,7 @@ export let allMembers = [
       { name: 'github', link: 'https://github.com/AlisaWonder' },
       { name: 'linkedin', link: 'https://www.linkedin.com/in/alisawonder/' }
     ],
-    imageURL: '...'
+    imageURL: 'http://cdn.onlinewebfonts.com/svg/img_252069.png'
   },
   {
     id: 3,
