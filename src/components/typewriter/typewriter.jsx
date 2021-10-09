@@ -3,8 +3,6 @@ import {textAboutTeam} from "../../API/API"
 import classes from "./typewriter.module.css"
 
 const Typewriter = () => {
-    console.log(textAboutTeam)
-    console.log(textAboutTeam[0])
 
     const [text, setText] = useState(localStorage.getItem("textOnMainPage") || "")
 
