@@ -1,14 +1,27 @@
-import React from 'react';
-import classes from "./Navbar.module.css"
+import React from 'react'
+import { Link } from 'react-router-dom'
+// import classNamees from "./Navbar.module.css"
 
 const NavBar = () => {
-    return (
-        <div className={classes.mainContainer}>
-            <h1 className={`d-flex ${classes.title}`}>
-                Hello
-            </h1>
-        </div>
-    );
-};
+  return (
+    <ul className='nav'>
+      <li className='nav-item'>
+        <Link id='home' className='nav-link' aria-current='page' to='/'>
+          Главная
+        </Link>
+      </li>
+      <li className='nav-item'>
+        <Link className='nav-link' to='/favorite'>
+          Избранное
+        </Link>
+      </li>
+      <li className='nav-item'>
+        <Link className='nav-link' to='/connect'>
+          Присоединиться
+        </Link>
+      </li>
+    </ul>
+  )
+}
 
-export default NavBar;
+export default NavBar
