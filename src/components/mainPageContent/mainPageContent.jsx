@@ -6,8 +6,10 @@ import mainPageImg from "../../assets/mainPage.png"
 const MainPageContent = () => {
     return (
         <div className={classes.mainContainer}>
-            <Typewriter />
-            <img src={mainPageImg} alt="#"/>
+            <div className="d-flex align-items-center">
+                <Typewriter />
+                <img src={mainPageImg} alt="Команда"/>
+            </div>
         </div>
     );
 };

@@ -1,7 +1,22 @@
 .mainContainer {
-    background: #000;
+    padding: 30px 0;
 }
 
 .title {
     font-size: 200px;
+}
+
+.navLink {
+    margin-right: 55px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navLinkItem {
+    text-decoration: none;
+    color: #fff;
+}
+
+.active {
+    font-weight: bold;
 }

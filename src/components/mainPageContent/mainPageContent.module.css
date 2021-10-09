@@ -1,9 +1,10 @@
 .mainContainer {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .mainContainer img {
     width: 600px;
+    margin-left: 100px;
 }
