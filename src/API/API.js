@@ -24,3 +24,5 @@ export const allMembers = [
         imageURL: "..."
     }
 ]
+
+export const textAboutTeam = "Мы 4 черепашки-ниндзя, наставляемые Владиленом (не крыса), мы любим пиццу и front-end! Добро пожаловать в наш мир!"
