@@ -73,7 +73,7 @@ export let allMembers = [
     id: 3,
     isFavorite: false,
     role: [{ name: 'developer', type: 'warning' }],
-    name: 'Коваль Татьяна',
+    name: 'Koval Tatiana',
     age: 23,
     county: 'Ukraine',
     about: 'начинающий Frontend-developer',
@@ -92,7 +92,7 @@ export let allMembers = [
       { name: 'github', link: 'https://github.com/tatiankap' },
       { name: 'linkedin', link: 'https://www.linkedin.com/in/tetiana-koval/' }
     ],
-    imageURL: ''
+    imageURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA-UNaKdgfG9QHYochXsYbaC8mxsTpwz8_hlYut7-_sMnENB-Tu266dgC5Dv5mAT3e5KM&usqp=CAU'
   }
 ]
 
