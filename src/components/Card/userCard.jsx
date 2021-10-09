@@ -26,7 +26,7 @@ const UserCard = ({ id, socialMedia, ...rest }) => {
 						))}
 					</div>
 
-					<Button type='primary' action={() => history.push(`/members/${id}`)}>
+					<Button type='secondary' action={() => history.push(`/members/${id}`)}>
 						Посмотреть
 					</Button>
 				</div>

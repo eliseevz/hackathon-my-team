@@ -6,7 +6,8 @@ const UsersCards = () => {
 	const [users, setUsers] = useState(allMembers);
 
 	return (
-		<div className='container'>
+		<div className='container p-0'>
+			<h2 className='mb-4'>Kоманда</h2>
 			<div className='row justify-content-center'>
 				{users.map(user => (
 					<UserCard {...user} key={user.id} />
