@@ -1,48 +1,43 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Badge from '../Badge';
+import { useHistory } from 'react-router';
+import PropTypes from 'prop-types';
 import classes from './UserCard.module.css';
+import Button from '../UI/button/Button';
+import UserInfo from './userInfo';
+import Social from './social';
+import UserHeader from './userHeader';
 
-const UserCard = ({user}) => {
-	return ( 
-		<Link to={`/members/${user.id}`} className={classes.link} >
-		<div className={`card m-1 ${classes.card}`} style={{'width': '18rem', backgroundColor: '#2A283F'}}>
-			<div className='d-flex flex-row justify-content-between align-self-center align-items-center' style={{width: '100%', padding: '1rem 1rem 0 1rem'}}>
-				<img className={`card-img-top ${classes.userImg} `} src={user.imageURL} alt="img"/>
-				<div className='d-flex flex-column align-items-start'>
-					<div className='d-flex flex-row mb-1'>
-						{user.role.map(role => (
-							<Badge color={role.type} content={role.name}/>
+const UserCard = ({ id, socialMedia, ...rest }) => {
+	const history = useHistory();
+
+	return (
+		<div className='col-sm-12 col-md-6 col-lg-6 col-xl-3 mb-1'>
+			<div className={`card ${classes.card}`}>
+				<div className={`d-flex flex-row justify-content-between align-self-center align-items-center ${classes.cardHeader}`}>
+					<UserHeader {...rest} />
+				</div>
+
+				<div className='card-body d-flex flex-column'>
+					<UserInfo {...rest} />
+
+					<div className='mt-3 mb-3'>
+						{socialMedia.map((social, index) => (
+							<Social {...social} key={index} />
 						))}
 					</div>
-					
-					<h5 className='mb-0'>{user.name}</h5>
-					<span>Front-end developer</span>
-				</div>
-				<i class="bi bi-heart"></i>
-			</div>
-			
-			<div className="card-body d-flex flex-column">
-				<span>Возраст: {user.age}</span>
-				<span>Страна: {user.county}</span>
-				<div>
-					<span>Стэк технологий: </span>
-					{user.stack.map(({name}) => (
-						<span key={name}>{name} </span>
-					))}
-				</div>
-				
-				
-				<div className='mt-2 mb-2'>
-					{user.socialMedia.map(({name, link}) => (
-						<a href={link} className='pe-2' style={{color: '#fff'}}>
-							<i class={`bi bi-${name}`} />
-						</a>
-					))}
+
+					<Button type='secondary' action={() => history.push(`/members/${id}`)}>
+						Посмотреть
+					</Button>
 				</div>
 			</div>
-		</div></Link>
-	 );
-}
- 
+		</div>
+	);
+};
+
+UserCard.propTypes = {
+	id: PropTypes.number.isRequired,
+	socialMedia: PropTypes.array.isRequired
+};
+
 export default UserCard;

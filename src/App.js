@@ -5,6 +5,7 @@ import Home from './pages/home'
 import Favorite from './pages/favorite'
 import Connect from './pages/connect'
 import Members from './pages/members'
+import Footer from './components/footer/footer'
 
 function App() {
   return (
@@ -16,8 +17,10 @@ function App() {
         <Route path='/connect' component={Connect} />
         <Route path='/' exact component={Home} />
       </Switch>
+      <Footer />
     </div>
   )
+
 }
 
 export default App

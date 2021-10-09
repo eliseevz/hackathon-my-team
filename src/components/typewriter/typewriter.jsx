@@ -1,15 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import {textAboutTeam} from "../../API/API"
+import { getDelay } from '../../utils/helper';
 import classes from "./typewriter.module.css"
 
 const Typewriter = () => {
 
     const [text, setText] = useState(localStorage.getItem("textOnMainPage") || "")
-
-    const getDelay = () => {
-        const randomDelay = Math.random() * (1 - 0.2 + 1) + 0.2
-        return randomDelay
-    }
 
     useEffect(() => {
         localStorage.setItem("textOnMainPage", "")

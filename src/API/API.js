@@ -108,3 +108,5 @@ export const textAboutTeam =
 export function setAllMembers(newState) {
   allMembers = { ...newState };
 }
+
+export const getMemberById = (id) => allMembers.find(user => user.id === id)

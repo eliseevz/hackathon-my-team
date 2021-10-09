@@ -18,7 +18,8 @@ const Progress = ({ name, percent }) => {
         <div
           className={classes.progressFill}
           style={{ width: value + `%` }}
-        ></div>
+        >
+          </div>
         <span className={classes.progressText}>{percentRounded}</span>
       </div>
     </div>
