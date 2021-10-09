@@ -7,7 +7,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
     background: #181723;
+  color: #fff;
 }
+
+::selection {
+  background: #FECC00; color:#000;
+  padding: 0px;
+}
+::-moz-selection {background: #FECC00; color:#000;}
+::-webkit-selection {background: #FECC00; color:#000;}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
