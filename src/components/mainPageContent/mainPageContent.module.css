@@ -1,0 +1,9 @@
+.mainContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainContainer img {
+    width: 600px;
+}
