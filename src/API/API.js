@@ -48,30 +48,6 @@ export const allMembers = [
     imageURL: "...",
   },
   {
-    id: 2,
-    isFavorite: false,
-    role: [{ name: "developer", type: "warning" }],
-    name: "Alisa Korenskaia",
-    age: 21,
-    county: "Spain/Russia",
-    about:
-      "I'm Junior Front-end developer, Linux and Open Source enthusiast. I adore travelling and learning new information. Designing and Coding are my passion.",
-    impact: "progress component",
-    stack: [
-      { name: "HTML", prog: 97 },
-      { name: "CSS", prog: 95 },
-      { name: "JavaScript", prog: 87 },
-      { name: "React", prog: 69 },
-    ],
-    socialMedia: [
-      { name: "instagram", link: "https://www.instagram.com/vvonder_tech/" },
-      { name: "telegram", link: "https://t.me/alisavvonder" },
-      { name: "github", link: "https://github.com/AlisaWonder" },
-      { name: "linkedin", link: "https://www.linkedin.com/in/alisawonder/" },
-    ],
-    imageURL: "...",
-  },
-  {
     id: 3,
     isFavorite: false,
     role: [{ name: "developer", type: "warning" }],
