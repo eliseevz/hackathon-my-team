@@ -8,7 +8,7 @@ export let allMembers = [
     ],
     name: 'Eliseev Ivan',
     age: 20,
-    county: 'Russia',
+    country: 'Russia',
     about: 'lorem',
     impact: 'lorem',
     stack: [
@@ -31,7 +31,7 @@ export let allMembers = [
     role: [{ name: 'developer', type: 'warning' }],
     name: 'Vasiliev Pavel',
     age: 22,
-    county: 'Russia',
+    country: 'Russia',
     about: ' Lorem ipsum dolor sit amet consectedtur adipisicing elit. Quas distinctio ad ut, laboriosam quam culpa saepe inventore delectus adipisci sequi.',
     impact: 'lorem',
     stack: [
@@ -54,7 +54,7 @@ export let allMembers = [
     role: [{ name: 'developer', type: 'warning' }],
     name: 'Alisa Korenskaia',
     age: 21,
-    county: 'Spain/Russia',
+    country: 'Spain/Russia',
     about: "I'm Junior Front-end developer, Linux and Open Source enthusiast. I adore travelling and learning new information. Designing and Coding are my passion.",
     impact: 'progress component',
     stack: [
@@ -77,7 +77,7 @@ export let allMembers = [
     role: [{ name: 'developer', type: 'warning' }],
     name: 'Koval Tatiana',
     age: 23,
-    county: 'Ukraine',
+    country: 'Ukraine',
     about: 'начинающий Frontend-developer',
     impact: 'lorem',
     stack: [
