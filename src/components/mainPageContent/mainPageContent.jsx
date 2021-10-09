@@ -12,7 +12,7 @@ const MainPageContent = () => {
 
     return (
         <div className={classes.mainContainer}>
-            <div className="d-flex align-items-center">
+            <div className="d-flex align-items-center overflow-hidden">
                 <div>
                     <Typewriter />
                     <CountOfMembers/>
