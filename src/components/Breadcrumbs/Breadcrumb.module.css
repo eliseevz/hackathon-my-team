@@ -1,0 +1,17 @@
+.active {
+	color: #fff;
+}
+
+.active a{
+	color: #fff;
+	text-decoration: none;
+}
+
+.default {
+	color: #6c757d;
+}
+
+.default a {
+	color: #6c757d;
+	text-decoration: none;
+}

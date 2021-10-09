@@ -104,3 +104,5 @@ export const textAboutTeam = 'Мы 4 черепашки-ниндзя, наста
 export function setAllMembers(newState) {
   allMembers = {...newState}
 }
+
+export const getMemberById = (id) => allMembers.find(user => user.id === id)
