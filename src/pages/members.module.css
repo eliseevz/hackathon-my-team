@@ -1,0 +1,13 @@
+.members__image {
+  width: 234px;
+  height: 234px;
+}
+
+.i {
+  font-size: 50px;
+}
+.progress__container {
+  background-color: #131220;
+  margin-top: 10px;
+  padding: 20px;
+}
