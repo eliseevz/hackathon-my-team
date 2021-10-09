@@ -30,7 +30,7 @@ export const allMembers = [
     name: 'Vasiliev Pavel',
     age: 22,
     county: 'Russia',
-    about: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas distinctio ad ut, laboriosam quam culpa saepe inventore delectus adipisci sequi.',
+    about: ' Lorem ipsum dolor sit amet consectedtur adipisicing elit. Quas distinctio ad ut, laboriosam quam culpa saepe inventore delectus adipisci sequi.',
     impact: 'lorem',
     stack: [
       { name: 'HTML', prog: 70 },
