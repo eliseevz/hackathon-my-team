@@ -5,7 +5,7 @@ import ConnectImage from "../components/ConnectUs/image/connectImage";
 const Connect = () => {
   return (
     <div className="container">
-      <h1 className="mt-5">Присоединиться в нашу команду!</h1>
+      <h1 className="mt-5 mb-4">Присоединиться в нашу команду!</h1>
       <div className="d-flex">
         <Form />
         <ConnectImage/>

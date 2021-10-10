@@ -12,7 +12,7 @@ const MemberInfo = ({state, setState}) => {
 
     return (
         <div>
-            <h3>Основная информация</h3>
+            <h3 className={"mb-3"}>Основная информация</h3>
             {
                 Object.keys(state).map(item => {
                     return <Input item={state[item]} onChange={(e) => changeHandler(e, item)} />

@@ -107,7 +107,7 @@ const Form = () => {
     return (
         <div className={`${classes.mainContainer} d-flex flex-column`}>
             { <step.component  state={allProps[step.id].state} setState={allProps[step.id].setState} /> }
-            <div className="buttonsWrap d-flex">
+            <div className={`${classes.buttonsWrap} d-flex`}>
                 <Button action={prevStepHandler} type="secondary" >Назад</Button>
                 {step.id === 2
                     ? <Button action={onAddNewMember} type="primary" >Присоединиться</Button>

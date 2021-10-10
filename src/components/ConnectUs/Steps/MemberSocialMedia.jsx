@@ -12,7 +12,7 @@ const MemberSocialMedia = ({state, setState}) => {
 
     return (
         <div>
-            <h3>Социальные сети</h3>
+            <h3 className={"mb-3"}>Социальные сети</h3>
             {
                 state.map((item, index) => {
                     return <InputSM item={item} onChange={(e) => onChangeHandler(e, index)}/>

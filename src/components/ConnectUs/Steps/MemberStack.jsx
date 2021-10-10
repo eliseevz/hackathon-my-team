@@ -29,7 +29,7 @@ const MemberStack = ({state, setState}) => {
 
     return (
         <div>
-            <h3>Основные технологии</h3>
+            <h3 className={"mb-3"}>Основные технологии</h3>
             {
                 state.map((item, index) => {
                     return <DoubleInput item={item} onRemove={() => onRemoveHandler(index)} onChange={(e, key) => onChangeHandler(e, index, key)} />
