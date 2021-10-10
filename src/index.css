@@ -8,6 +8,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
     background: #181723;
   color: #fff;
+  position: relative;
+  padding-bottom: 200px;
+  min-height: 100vh;
 }
 
 ::selection {

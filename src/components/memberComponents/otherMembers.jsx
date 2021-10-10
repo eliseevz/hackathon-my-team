@@ -8,7 +8,7 @@ const OtherMembers = ({ memberId }) => {
 
   return (
     <div className={`  ${classes.other__members}`}>
-      <p className=" p-3">Другие участники:</p>
+      <p className="p-3 m-0">Другие участники:</p>
       {users.map((user) => (
         <MemberCard {...user} key={user.id} memberId={memberId} />
       ))}

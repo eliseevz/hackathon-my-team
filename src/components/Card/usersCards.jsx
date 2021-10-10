@@ -9,7 +9,7 @@ const UsersCards = ({children}) => {
 	return (
 		<div className='container p-0'>
 			<h2 className='mb-4'>{children}</h2>
-			<div className='row justify-content-center'>
+			<div className='row justify-content-start'>
 				{users.map(user => (
 					<UserCard {...user} key={user.id} />
 				))}

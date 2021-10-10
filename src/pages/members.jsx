@@ -13,6 +13,8 @@ import MemberSocial from "../components/memberComponents/memberSocial";
 import ProgressList from "../components/progress/progressList";
 import MemberStack from "../components/memberComponents/memberStack";
 import MemberHeader from "../components/memberComponents/memberHeader";
+import is from "is_js";
+
 
 const Members = () => {
   const [userChoose] = useState(allMembers);
@@ -29,29 +31,33 @@ const Members = () => {
           <OtherMembers memberId={memberId} />
         </div>
         <div className="d-flex flex-column ml-5 w-75 justify-content-between mt-5">
-<<<<<<< HEAD
           <MemberHeader user={userChoose[memberId]} />
           </div>
->>>>>>> parent of f4cffd1 (refactoring done)
           <div className="d-flex">
             <MemberSocial user={userChoose[memberId]} />
             <div className="d-flex flex-column ">
               <img
-                src={userChoose[memberId].imageURL}
+                // src={userChoose[memberId].imageURL}
+                src={is.url(userChoose[memberId].imageURL) ? userChoose[memberId].imageURL : "https://grilcity.ru/assets/img/testimonials/placeholder.png"}
                 alt="img"
                 className={classes.members__image}
               />
-              <div className=" mt-2 d-flex align-items-center justify-content-center">
-                {userChoose[memberId].socialMedia.map(({ name, link }) => (
-                  <a href={link} className="pe-3 " style={{ color: "#fff" }}>
-                    <i
-                      className={`social__media bi bi-${name}`}
-                      style={{ fontSize: "30px" }}
-                    />
-                  </a>
-                ))}
+              <div className="mt-2 d-flex align-items-center justify-content-center">
+                {userChoose[memberId].socialMedia.map(({ name, link }) => {
+                  if(is.url(link)) {
+                    return (
+                        <a href={link} className="pe-3" className={classes.socialMedia}>
+                          <i
+                              className={`social__media bi bi-${name}`}
+                              style={{ fontSize: "30px" }}
+                          />
+                        </a>
+                    )
+                  }
+                })}
               </div>
             </div>
+
             <div className="d-flex flex-column">
               <MemberInfo user={userChoose[memberId]} />
               <MemberStack user={userChoose[memberId]} />
@@ -92,6 +98,7 @@ const Members = () => {
         </div>
       </div>
     );
+
     )
   }
   return (
