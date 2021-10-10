@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { allMembers } from "../API/API";
@@ -13,17 +12,19 @@ import MemberSocial from "../components/memberComponents/memberSocial";
 import ProgressList from "../components/progress/progressList";
 import MemberStack from "../components/memberComponents/memberStack";
 import MemberHeader from "../components/memberComponents/memberHeader";
+import FavoriteButton from '../components/favoriteButton/favoriteButton'
 import is from "is_js";
 
 
+
 const Members = () => {
-  const [userChoose, setUserChoose] = useState(allMembers)
+  const [userChoose] = useState(allMembers)
   const params = useParams()
   const memberId = params.memberId
   if (memberId) {
     return (
-      <div className="container d-flex flex-row align-items-start mt-5 justify-content-between">
-        <div className="d-flex flex-column">
+      <div className='container d-flex flex-row align-items-start mt-5 justify-content-between'>
+        <div className='d-flex flex-column'>
           <Breadcrumbs />
           <OtherMembers memberId={memberId} />
         </div>
@@ -96,11 +97,10 @@ const Members = () => {
     );
   }
   return (
-    <div className="container mt-5">
+    <div className='container mt-5'>
       <UsersCards />
     </div>
-  );
-};
-
+  )
+}
 
 export default Members

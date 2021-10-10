@@ -13,7 +13,7 @@ const UserCard = ({ id, socialMedia, ...rest }) => {
   return (
     <div className={`card ${classes.card}`}>
       <div className={`d-flex flex-row justify-content-between align-self-center align-items-center ${classes.cardHeader}`}>
-        <UserHeader {...rest} />
+        <UserHeader {...rest} id={id} />
       </div>
 
       <div className='card-body d-flex flex-column'>

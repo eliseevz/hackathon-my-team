@@ -4,21 +4,10 @@ import UserCard from '../components/Card/userCard'
 
 const Favorite = () => {
   const [users, setUsers] = useState()
-  const [favoriteUsers, setFavoriteUsers] = useState()
 
   useEffect(() => {
     setUsers(allMembers)
   }, [])
-
-  // useEffect(() => {
-  //   setFavoriteUsers((prevState) => {
-  //     users.map((user) => {
-  //       if (user.isFavorite) {
-  //         new Array(...[prevState, user])
-  //       }
-  //     })
-  //   })
-  // }, [users])
 
   if (users) {
     const elem = users.find((user) => user.isFavorite)

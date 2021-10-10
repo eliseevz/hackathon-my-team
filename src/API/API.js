@@ -9,9 +9,10 @@ export let allMembers = [
 
     name: 'Елисеев Иван',
     age: 20,
-    country: "Россия",
-    about: "Я люблю визуал и эффективность, люблю разрабатывать, создавать что-то с нуля, интенсиво изучаю front-end",
-    impact: "Создал дизайн-макет проекта, организовал рабочее пространство в трелло, распределил задачи, подготовил стартовый проект, сделал эффект пищущей машинки на главной, создал страницу добавления нового пользователя и ее функционал, фикс багов в проекте",
+    country: 'Россия',
+    about: 'Я люблю визуал и эффективность, люблю разрабатывать, создавать что-то с нуля, интенсиво изучаю front-end',
+    impact:
+      'Создал дизайн-макет проекта, организовал рабочее пространство в трелло, распределил задачи, подготовил стартовый проект, сделал эффект пищущей машинки на главной, создал страницу добавления нового пользователя и ее функционал, фикс багов в проекте',
     stack: [
       { name: 'HTML', prog: 89 },
       { name: 'CSS', prog: 89 },
@@ -30,13 +31,12 @@ export let allMembers = [
   {
     id: 1,
     isFavorite: false,
-    role: [{ name: "developer", type: "warning" }],
-    name: "Vasiliev Pavel",
+    role: [{ name: 'developer', type: 'warning' }],
+    name: 'Васильев Павел',
     age: 22,
-    country: "Russia",
-    about:
-      " Lorem ipsum dolor sit amet consectedtur adipisicing elit. Quas distinctio ad ut, laboriosam quam culpa saepe inventore delectus adipisci sequi.",
-    impact: "lorem",
+    country: 'Россия',
+    about: 'Начинающий Frontend-разработчик',
+    impact: 'В этом проекте занимался роутингом и страницой "избранное". Если не заметили, обратите внимание на иконку нашей вкладки. Да, его добавил тоже я :)',
     stack: [
       { name: "HTML", prog: 70 },
       { name: "CSS", prog: 70 },
@@ -52,19 +52,18 @@ export let allMembers = [
         link: "https://www.linkedin.com/in/pavel-vasiliev-680083220/",
       },
     ],
-    imageURL: ''
-
+    imageURL: 'https://sun9-19.userapi.com/impg/DCSTZi4BUfN4oPArlFfF2bnTNjC-XFuYw3J6Mg/X8K_FvcZ4NY.jpg?size=901x1080&quality=96&sign=c04bbc070a2f0f72a7fcee92a38d8255&type=album'
   },
   {
     id: 2,
     isFavorite: false,
-    role: [{ name: "developer", type: "warning" }],
-    name: "Алиса Коренская",
+    role: [{ name: 'developer', type: 'warning' }],
+    name: 'Алиса Коренская',
     age: 21,
-    country: "Испания/Россия",
+    country: 'Испания/Россия',
     about:
-      "Я Алиса Junior Front-end разработчик. Я Open source, Linux энтузиаст. Мне интерсны образовательние, игровые проекты, а также проекты связанные с дизайном и развитием информационных технологий. Мой рабочий и творческий ник Alisa Wonder. А еще я иногда эльф.",
-    impact: "progress component",
+      'Я Алиса Junior Front-end разработчик. Я Open source, Linux энтузиаст. Мне интерсны образовательние, игровые проекты, а также проекты связанные с дизайном и развитием информационных технологий. Мой рабочий и творческий ник Alisa Wonder. А еще я иногда эльф.',
+    impact: 'progress component',
     stack: [
       { name: "HTML", prog: 97 },
       { name: "CSS", prog: 95 },
@@ -82,13 +81,13 @@ export let allMembers = [
   },
   {
     id: 3,
-    isFavorite: true,
-    role: [{ name: "developer", type: "warning" }],
-    name: "Коваль Татьяна",
+    isFavorite: false,
+    role: [{ name: 'developer', type: 'warning' }],
+    name: 'Коваль Татьяна',
     age: 23,
-    county: "Украина",
-    about: "начинающий Frontend-developer",
-    impact: "lorem",
+    county: 'Украина',
+    about: 'начинающий Frontend-developer',
+    impact: 'lorem',
     stack: [
       { name: "HTML", prog: 95 },
       { name: "CSS", prog: 95 },
@@ -115,4 +114,12 @@ export function setAllMembers(newState) {
   allMembers = newState;
 }
 
-export const getMemberById = (id) => allMembers.find((user) => user.id === id);
+export const switchFavoritStatus = (id) => {
+  if (allMembers[id].isFavorite === true) {
+    allMembers[id].isFavorite = false
+  } else {
+    allMembers[id].isFavorite = true
+  }
+}
+
+export const getMemberById = (id) => allMembers.find((user) => user.id === id)
