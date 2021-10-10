@@ -87,6 +87,7 @@ const Members = () => {
             </div>
           </div>
         </div>
+      </div>
     )
   }
   return (
