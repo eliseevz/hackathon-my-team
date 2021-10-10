@@ -3,8 +3,9 @@ import { allMembers } from '../../API/API';
 import UserCard from './userCard';
 
 const UsersCards = () => {
-	const [users, setUsers] = useState(allMembers);
 
+	const [users, setUsers] = useState(allMembers);
+	console.log(users, " this is users in usersCard")
 	return (
 		<div className='container p-0'>
 			<h2 className='mb-4'>Kоманда</h2>

@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { allMembers } from "../API/API";
-import Badge from "../components/Badge";
+import Badge from "../components/UI/badge/badge";
 import Progress from "../components/progress/progress";
 import classes from "./members.module.css";
 

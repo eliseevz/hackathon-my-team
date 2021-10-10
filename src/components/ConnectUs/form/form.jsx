@@ -1,57 +1,105 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import classes from "./form.module.css"
 import Input from "../../UI/input/input";
 import Button from "../../UI/button/Button";
+import DoubleInput from "../../UI/input/doubleInput";
+import { allMembers, setAllMembers } from "../../../API/API";
+import MemberInfo from "../Steps/MemberInfo";
+import MemberStack from "../Steps/MemberStack";
+import MemberSocialMedia from "../Steps/MemberSocialMedia";
 
 const Form = () => {
 
-    const initialState = {
+    const [memberInfo, setMemberInfo] = useState({
         name: {label: "Имя", value: ""},
-        country: {label: "Страна", value: ""},
         age: {label: "Возраст", value: ""},
+        county: {label: "Страна", value: ""},
         about: {label: "О себе", value: ""},
-        url: {label: "URL фотографии", value: ""},
-        insagram: {label: "Instagram", value: ""},
-        telegram: {label: "Telegram", value: ""},
-        github: {label: "Git", value: ""},
-        linkedin: {label: "Linkedin", value: ""},
+        imageURL: {label: "URL фотографии", value: ""},
+    })
+    const [memberStack, setMemberStack] = useState([
+        {name: "", prog: 0},
+    ]);
+    const [memberSocialMedia, setMemberSocialMedia] = useState([
+            { name: "instragram", link: ""},
+            { name: "telegram", link: ""},
+            { name: "github", link: ""},
+            { name: "linkedin", link: ""},
+        ]
+    );
+
+    let allSteps = [
+        MemberInfo,
+        MemberStack,
+        MemberSocialMedia
+    ]
+
+    let allProps = [
+        {state: memberInfo, setState: setMemberInfo},
+        {state: memberStack, setState: setMemberStack},
+        {state: memberSocialMedia, setState: setMemberSocialMedia}
+    ]
+
+    const [step, setStep] = useState({id: 0, component: allSteps[0]});
+
+    const nextStepHandler = () => {
+        if (step.id < 2) {
+            setStep({id: step.id + 1, component: allSteps[step.id + 1]})
+        }
+    }
+    const prevStepHandler = () => {
+        if (step.id > 0) {
+            setStep({id: step.id - 1, component: allSteps[step.id - 1]})
+        }
     }
 
-    const [state, setState] = useState(initialState);
+    const onAddNewMember = () => {
+        console.log(allMembers)
+        console.log(memberInfo, "member info")
 
-    const changeHandler = (e, key) => {
-        const newState = {
-            ...state,
-            [key]: {...state[key], value: e.target.value}
-        }
-        setState(newState)
-    }
+        let stack = []
+        memberStack.map(stackItem => {
+            stack.push(stackItem)
+        })
 
-    const addNewMemberHandler = (newMember) => {
-        if (localStorage.getItem("newMemers")) {
-            let newMembers = [
-                ...JSON.parse(localStorage.getItem("newMemers")),
-                newMember
-            ]
-        } else {
-            let newMemItem = {}
-            Object.keys(state).map(item => {
-                newMemItem[item] = state[item].value
-            })
-            console.log(newMemItem, " newMemItem")
-            // const setMember = JSON.stringify([newMember])
-            // localStorage.setItem("newMemers", setMember)
+        let socialMedia = []
+        memberSocialMedia.map(smItem => {
+            socialMedia.push(smItem)
+        })
+
+        let newMemberInfo = {}
+        Object.keys(memberInfo).forEach(item => {
+            newMemberInfo[item] = memberInfo[item].value
+        })
+
+        console.log(newMemberInfo, "new member infi")
+        console.log(stack, "stack")
+        console.log(socialMedia, "socialMedia")
+
+        let newMember = {
+            id: allMembers.length,
+            isFavorite: false,
+            ...newMemberInfo,
+            stack: stack,
+            socialMedia: socialMedia,
+            role: [{name: "newest", type: "muted"}]
         }
+
+        setAllMembers([...allMembers, newMember])
+        console.log(newMember)
     }
 
     return (
         <div className={`${classes.mainContainer} d-flex flex-column`}>
-            {
-                Object.keys(state).map(item => {
-                    return <Input onChange={(e) => changeHandler(e, item)} item={state[item]} ></Input>
-                })
-            }
-            <Button action={() => addNewMemberHandler(state)} type="primary">Хочу к вам в команду!</Button>
+            { <step.component  state={allProps[step.id].state} setState={allProps[step.id].setState} /> }
+            <div className="buttonsWrap d-flex">
+                <Button action={prevStepHandler} type="secondary" >Назад</Button>
+                {step.id === 2
+                    ? <Button action={onAddNewMember} type="primary" >Присоединиться</Button>
+                    : <Button action={nextStepHandler} type="primary" >Далее</Button>
+
+                }
+            </div>
         </div>
     );
 };

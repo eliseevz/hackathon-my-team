@@ -106,7 +106,7 @@ export const textAboutTeam =
   "Мы 4 черепашки-ниндзя, наставляемые Владиленом (не крыса), мы любим пиццу и front-end! \n Добро пожаловать в наш мир!";
 
 export function setAllMembers(newState) {
-  allMembers = { ...newState };
+  allMembers = newState;
 }
 
 export const getMemberById = (id) => allMembers.find(user => user.id === id)
