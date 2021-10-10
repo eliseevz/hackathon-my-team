@@ -1,6 +1,19 @@
 .members__image {
   width: 234px;
   height: 234px;
+  padding-right: 10px;
+}
+
+.members__title {
+  padding-right: 10px;
+}
+.members__info {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.members__stack {
+  padding-left: 10px;
 }
 
 .i {

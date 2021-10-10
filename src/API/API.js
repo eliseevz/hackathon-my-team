@@ -8,7 +8,7 @@ export let allMembers = [
     ],
     name: "Eliseev Ivan",
     age: 20,
-    county: "Russia",
+    country: "Russia",
     about: "lorem",
     impact: "lorem",
     stack: [
@@ -31,7 +31,7 @@ export let allMembers = [
     role: [{ name: "developer", type: "warning" }],
     name: "Vasiliev Pavel",
     age: 22,
-    county: "Russia",
+    country: "Russia",
     about:
       " Lorem ipsum dolor sit amet consectedtur adipisicing elit. Quas distinctio ad ut, laboriosam quam culpa saepe inventore delectus adipisci sequi.",
     impact: "lorem",
@@ -53,11 +53,11 @@ export let allMembers = [
     id: 2,
     isFavorite: false,
     role: [{ name: "developer", type: "warning" }],
-    name: "Alisa Korenskaia",
+    name: "Алиса Коренская",
     age: 21,
-    county: "Spain/Russia",
+    country: "Испания/Россия",
     about:
-      "I'm Junior Front-end developer, Linux and Open Source enthusiast. I adore travelling and learning new information. Designing and Coding are my passion.",
+      "Я Алиса Junior Front-end разработчик. Я Open source, Linux энтузиаст. Мне интерсны образовательние, игровые проекты, а также проекты связанные с дизайном и развитием информационных технологий. Мой рабочий и творческий ник Alisa Wonder. А еще я иногда эльф.",
     impact: "progress component",
     stack: [
       { name: "HTML", prog: 97 },
@@ -80,7 +80,7 @@ export let allMembers = [
     role: [{ name: "developer", type: "warning" }],
     name: "Koval Tatiana",
     age: 23,
-    county: "Ukraine",
+    country: "Ukraine",
     about: "начинающий Frontend-developer",
     impact: "lorem",
     stack: [
@@ -109,4 +109,4 @@ export function setAllMembers(newState) {
   allMembers = { ...newState };
 }
 
-export const getMemberById = (id) => allMembers.find(user => user.id === id)
+export const getMemberById = (id) => allMembers.find((user) => user.id === id);
