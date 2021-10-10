@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { allMembers } from "../API/API";
@@ -9,9 +10,9 @@ import OtherMembers from "../components/memberComponents/otherMembers";
 import UsersCards from "../components/Card/usersCards";
 
 const Members = () => {
-  const [userChoose, setUserChoose] = useState(allMembers);
-  const params = useParams();
-  const memberId = params.memberId;
+  const [userChoose, setUserChoose] = useState(allMembers)
+  const params = useParams()
+  const memberId = params.memberId
   if (memberId) {
     return (
       <div className="container d-flex flex-row align-items-start mt-5 justify-content-between">
@@ -86,8 +87,7 @@ const Members = () => {
             </div>
           </div>
         </div>
-      </div>
-    );
+    )
   }
   return (
     <div className="container mt-5">
@@ -96,4 +96,5 @@ const Members = () => {
   );
 };
 
-export default Members;
+
+export default Members

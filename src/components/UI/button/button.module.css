@@ -21,6 +21,19 @@
     border: none;
 }
 
+.myButton.muted {
+    background: #666B86;
+    color: #fff;
+    border: none;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.myButton.muted .buttonArrow {
+    display: none;
+}
+
 .buttonArrow {
     opacity: 0;
     transition: all 0.2s ease;

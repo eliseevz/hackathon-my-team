@@ -6,3 +6,31 @@
     padding: 0 20px;
     color: #fff;
 }
+
+.dubleInput_1 {
+    height: 50px;
+    outline: none;
+    border: none;
+    background: #2A283F;
+    padding: 0 20px;
+    color: #fff;
+}
+
+.dubleInput_2 {
+    height: 50px;
+    outline: none;
+    border: none;
+    background: #2A283F;
+    padding: 0 20px;
+    color: #fff;
+}
+
+.delete {
+    color: #ccc;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.delete:hover {
+    color: red;
+}
