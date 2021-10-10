@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import classes from "./progress.module.css";
 import PropTypes from "prop-types";
 import { RandColor } from "../../utils/helper";
 
 const Progress = ({ name, percent }) => {
   const percentRounded = Math.round(percent);
+
   const [value, setValue] = useState(0);
 
-  useEffect(() => {
+  React.useEffect(() => {
     setValue(percent);
   });
 

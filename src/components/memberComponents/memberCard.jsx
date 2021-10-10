@@ -12,8 +12,8 @@ const MemberCard = ({ imageURL, name, id, memberId }) => {
       >
         <img src={imageURL} alt="img" className={classes.member__image} />
         <span>{name}</span>
-        {memberId === String(id) ? (
-          <i className={`bi bi-arrow-right ${classes.member__choosen}`}></i>
+        {memberId == id ? (
+          <i class={`bi bi-arrow-right ${classes.member__choosen}`}></i>
         ) : (
           ""
         )}
@@ -25,7 +25,7 @@ const MemberCard = ({ imageURL, name, id, memberId }) => {
 MemberCard.propTypes = {
   imageURL: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   memberId: PropTypes.string.isRequired,
 };
 
