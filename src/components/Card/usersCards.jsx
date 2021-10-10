@@ -1,22 +1,25 @@
-import React, { useState } from 'react'
-import { allMembers } from '../../API/API'
-import UserCard from './userCard'
+import React, { useState } from 'react';
+import { allMembers } from '../../API/API';
+import UserCard from './userCard';
+import PropTypes from 'prop-types';
 
-const UsersCards = () => {
-  const [users] = useState(allMembers)
+const UsersCards = ({children}) => {
+	const [users, setUsers] = useState(allMembers);
 
-  return (
-    <div className='container p-0'>
-      <h2 className='mb-4'>Kоманда</h2>
-      <div className='row justify-content-center'>
-        {users.map((user) => (
-          <div key={user.id} className='col-sm-12 col-md-6 col-lg-6 col-xl-3 mb-1'>
-            <UserCard {...user} key={user.id} />
-          </div>
-        ))}
-      </div>
-    </div>
-  )
+	return (
+		<div className='container p-0'>
+			<h2 className='mb-4'>{children}</h2>
+			<div className='row justify-content-center'>
+				{users.map(user => (
+					<UserCard {...user} key={user.id} />
+				))}
+			</div>
+		</div>
+	);
+};
+
+UsersCards.propTypes = {
+	children: PropTypes.string.isRequired
 }
 
-export default UsersCards
+export default UsersCards;

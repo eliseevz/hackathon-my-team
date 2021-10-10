@@ -74,12 +74,12 @@ export let allMembers = [
   {
     id: 3,
     isFavorite: false,
-    role: [{ name: 'developer', type: 'warning' }],
-    name: 'Koval Tatiana',
+    role: [{ name: "developer", type: "warning" }],
+    name: "Коваль Татьяна",
     age: 23,
-    country: 'Ukraine',
-    about: 'начинающий Frontend-developer',
-    impact: 'lorem',
+    county: "Украина",
+    about: "начинающий Frontend-developer",
+    impact: "lorem",
     stack: [
       { name: 'HTML', prog: 95 },
       { name: 'CSS', prog: 95 },

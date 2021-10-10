@@ -5,7 +5,7 @@ import MainPageContent from "../components/mainPageContent/mainPageContent";
 const Home = () => {
   return <div className="container">
     <MainPageContent />
-    <UsersCards />
+    <UsersCards>Команда</UsersCards>
   </div>
 }
 
