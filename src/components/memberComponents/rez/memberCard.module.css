@@ -1,0 +1,28 @@
+.member__image {
+  width: 49px;
+  height: 49px;
+  margin-left: 10px;
+  margin-right: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.member__card {
+  background: #2a283f;
+  position: relative;
+}
+
+.member__link {
+  border-top: 1px solid #343150;
+  text-decoration: none;
+}
+.member__card :hover {
+  background: #343150;
+}
+
+.member__choosen {
+  /*padding-left: 50px;*/
+  font-size: 30px;
+  position: absolute;
+  right: 15px;
+}

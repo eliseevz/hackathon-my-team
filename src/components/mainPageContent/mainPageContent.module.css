@@ -5,6 +5,16 @@
 }
 
 .mainContainer img {
-    width: 600px;
+    height: 400px;
     margin-left: 100px;
+    margin-bottom: 200px;
+    animation: shadow 15s infinite ease;
+}
+
+@keyframes shadow {
+    from {transform: rotate3d(1, 1, 0, 0);}
+    20% {transform: rotate3d(1, 1, 0, 25deg);}
+    40% {transform: rotate3d(1, -1, 0, -25deg);}
+    60% {transform: rotate3d(-1, 1, 0, -25deg);}
+    to {transform: rotate3d(1, 1, 0, 0);}
 }

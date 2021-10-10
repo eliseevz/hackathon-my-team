@@ -4,3 +4,8 @@
 
 .mainContainer input {
 }
+
+.buttonsWrap button {
+    margin-top: 30px;
+    margin-right: 15px;
+}
