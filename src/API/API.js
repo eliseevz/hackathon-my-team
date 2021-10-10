@@ -73,7 +73,7 @@ export let allMembers = [
   },
   {
     id: 3,
-    isFavorite: false,
+    isFavorite: true,
     role: [{ name: "developer", type: "warning" }],
     name: "Коваль Татьяна",
     age: 23,
