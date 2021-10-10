@@ -22,19 +22,6 @@ const Members = () => {
           <OtherMembers memberId={memberId} />
         </div>
         <div className="d-flex flex-column ml-5 w-75 justify-content-between mt-5">
-          {/* <div className="d-flex flex-row align-items-center">
-            <h1 className={classes.members__title}>
-              {userChoose[memberId].name}
-            </h1>
-            <div className={`d-flex flex-row  ${classes.members__title}`}>
-              {userChoose[memberId].role.map((role) => (
-                <span>
-                  <Badge type={role.type} text={role.name} />
-                </span>
-              ))}
-            </div>
-            <i class="bi bi-heart" style={{ fontSize: "20px" }}></i>
-          </div> */}
           <MemberHeader user={userChoose[memberId]} />
           <div className="d-flex">
             <MemberSocial user={userChoose[memberId]} />
