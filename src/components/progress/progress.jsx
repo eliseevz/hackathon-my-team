@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import classes from "./progress.module.css";
 import PropTypes from "prop-types";
+import { RandColor } from "../../utils/helper";
 
 const Progress = ({ name, percent }) => {
   const percentRounded = Math.round(percent);
@@ -17,10 +18,9 @@ const Progress = ({ name, percent }) => {
       <div className={classes.progress}>
         <div
           className={classes.progressFill}
-          style={{ width: value + `%` }}
-        >
-          </div>
-        <span className={classes.progressText}>{percentRounded}</span>
+          style={{ width: value + "%", background: RandColor() }}
+        ></div>
+        <span className={classes.progressText}>{percentRounded + "%"}</span>
       </div>
     </div>
   );

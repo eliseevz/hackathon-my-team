@@ -8,9 +8,9 @@ export let allMembers = [
     ],
     name: 'Eliseev Ivan',
     age: 20,
-    country: 'Russia',
-    about: 'lorem',
-    impact: 'lorem',
+    country: "Russia",
+    about: "lorem",
+    impact: "lorem",
     stack: [
       { name: 'HTML', prog: 99 },
       { name: 'CSS', prog: 99 },
@@ -51,12 +51,13 @@ export let allMembers = [
   {
     id: 2,
     isFavorite: false,
-    role: [{ name: 'developer', type: 'warning' }],
-    name: 'Alisa Korenskaia',
+    role: [{ name: "developer", type: "warning" }],
+    name: "Алиса Коренская",
     age: 21,
-    country: 'Spain/Russia',
-    about: "I'm Junior Front-end developer, Linux and Open Source enthusiast. I adore travelling and learning new information. Designing and Coding are my passion.",
-    impact: 'progress component',
+    country: "Испания/Россия",
+    about:
+      "Я Алиса Junior Front-end разработчик. Я Open source, Linux энтузиаст. Мне интерсны образовательние, игровые проекты, а также проекты связанные с дизайном и развитием информационных технологий. Мой рабочий и творческий ник Alisa Wonder. А еще я иногда эльф.",
+    impact: "progress component",
     stack: [
       { name: 'HTML', prog: 97 },
       { name: 'CSS', prog: 95 },
@@ -105,3 +106,4 @@ export function setAllMembers(newState) {
 }
 
 export const getMemberById = (id) => allMembers.find((user) => user.id === id)
+
