@@ -54,7 +54,7 @@ const Members = () => {
             {/*  </div>*/}
             {/*</div>*/}
 
-            <div className="d-flex flex-column">
+            <div className="d-flex flex-column ms-3">
               <MemberInfo user={userChoose[memberId]} />
               <MemberStack user={userChoose[memberId]} />
               <ProgressList user={userChoose[memberId]} />

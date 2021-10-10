@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 const MemberHeader = ({ user }) => {
   return (
-    <div className="d-flex flex-row align-items-center">
+    <div className="d-flex flex-row align-items-center mb-3">
       <h1 className={classes.members__title}>{user.name}</h1>
       <div className={`d-flex flex-row  ${classes.members__title}`}>
         {user.role.map((role) => (
