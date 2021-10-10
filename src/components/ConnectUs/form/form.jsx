@@ -7,26 +7,34 @@ import { allMembers, setAllMembers } from "../../../API/API";
 import MemberInfo from "../Steps/MemberInfo";
 import MemberStack from "../Steps/MemberStack";
 import MemberSocialMedia from "../Steps/MemberSocialMedia";
+import { useHistory } from "react-router-dom"
 
 const Form = () => {
 
-    const [memberInfo, setMemberInfo] = useState({
+    const history = useHistory()
+
+    const memberInfoInitialState = {
         name: {label: "Имя", value: ""},
         age: {label: "Возраст", value: ""},
         county: {label: "Страна", value: ""},
         about: {label: "О себе", value: ""},
         imageURL: {label: "URL фотографии", value: ""},
-    })
-    const [memberStack, setMemberStack] = useState([
+    }
+
+    const memberStackInitialState = [
         {name: "", prog: 0},
-    ]);
-    const [memberSocialMedia, setMemberSocialMedia] = useState([
-            { name: "instragram", link: ""},
-            { name: "telegram", link: ""},
-            { name: "github", link: ""},
-            { name: "linkedin", link: ""},
-        ]
-    );
+    ]
+
+    const memberSocialMediaInititalState = [
+        { name: "instragram", link: ""},
+        { name: "telegram", link: ""},
+        { name: "github", link: ""},
+        { name: "linkedin", link: ""},
+    ]
+
+    const [memberInfo, setMemberInfo] = useState(memberInfoInitialState)
+    const [memberStack, setMemberStack] = useState(memberStackInitialState);
+    const [memberSocialMedia, setMemberSocialMedia] = useState(memberSocialMediaInititalState);
 
     let allSteps = [
         MemberInfo,
@@ -82,10 +90,17 @@ const Form = () => {
             ...newMemberInfo,
             stack: stack,
             socialMedia: socialMedia,
-            role: [{name: "newest", type: "muted"}]
+            role: [{name: "new", type: "success"}]
         }
 
         setAllMembers([...allMembers, newMember])
+        setMemberInfo(memberInfoInitialState)
+        setMemberStack(memberStackInitialState)
+        setMemberSocialMedia(memberSocialMediaInititalState)
+
+        history.push(`/members/${newMember.id}`)
+
+        alert("Добро пожаловать!")
         console.log(newMember)
     }
 

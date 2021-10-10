@@ -8,6 +8,7 @@ import classes from "./members.module.css";
 import Breadcrumbs from "../components/Breadcrumbs/breadcrumbs";
 import OtherMembers from "../components/memberComponents/otherMembers";
 import UsersCards from "../components/Card/usersCards";
+import is from "is_js";
 
 const Members = () => {
   const [userChoose, setUserChoose] = useState(allMembers)
@@ -37,22 +38,27 @@ const Members = () => {
           <div className="d-flex">
             <div className="d-flex flex-column ">
               <img
-                src={userChoose[memberId].imageURL}
+                // src={userChoose[memberId].imageURL}
+                src={is.url(userChoose[memberId].imageURL) ? userChoose[memberId].imageURL : "https://grilcity.ru/assets/img/testimonials/placeholder.png"}
                 alt="img"
                 className={classes.members__image}
               />
-              <div className=" mt-2 d-flex align-items-center justify-content-center">
-                {userChoose[memberId].socialMedia.map(({ name, link }) => (
-                  <a href={link} className="pe-3 " style={{ color: "#fff" }}>
-                    <i
-                      className={`social__media bi bi-${name}`}
-                      style={{ fontSize: "30px" }}
-                    />
-                  </a>
-                ))}
+              <div className="mt-2 d-flex align-items-center justify-content-center">
+                {userChoose[memberId].socialMedia.map(({ name, link }) => {
+                  if(is.url(link)) {
+                    return (
+                        <a href={link} className="pe-3" className={classes.socialMedia}>
+                          <i
+                              className={`social__media bi bi-${name}`}
+                              style={{ fontSize: "30px" }}
+                          />
+                        </a>
+                    )
+                  }
+                })}
               </div>
             </div>
-            <div className="d-flex flex-column">
+            <div className="d-flex flex-column ms-3">
               <span className={classes.members__info}>
                 <b>Страна:</b> {userChoose[memberId].country}
               </span>

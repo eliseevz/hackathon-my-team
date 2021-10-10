@@ -9,6 +9,7 @@
 
 .member__card {
   background: #2a283f;
+  position: relative;
 }
 
 .member__link {
@@ -20,5 +21,8 @@
 }
 
 .member__choosen {
-  padding-left: 50px;
+  /*padding-left: 50px;*/
+  font-size: 30px;
+  position: absolute;
+  right: 15px;
 }

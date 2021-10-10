@@ -6,24 +6,25 @@ export let allMembers = [
       { name: 'team lead', type: 'danger' },
       { name: 'developer', type: 'warning' }
     ],
-    name: 'Eliseev Ivan',
+    name: 'Елисеев Иван',
     age: 20,
-    country: "Russia",
-    about: "lorem",
-    impact: "lorem",
+    country: "Россия",
+    about: "Я люблю визуал и эффективность, люблю разрабатывать, создавать что-то с нуля, интенсиво изучаю front-end",
+    impact: "Создал дизайн-макет проекта, организовал рабочее пространство в трелло, распределил задачи, подготовил стартовый проект, сделал эффект пищущей машинки на главной, создал страницу добавления нового пользователя и ее функционал, фикс багов в проекте",
     stack: [
-      { name: 'HTML', prog: 99 },
-      { name: 'CSS', prog: 99 },
+      { name: 'HTML', prog: 89 },
+      { name: 'CSS', prog: 89 },
       { name: 'React', prog: 70 },
+      { name: 'Redux', prog: 56 },
       { name: 'Typescript', prog: 30 }
     ],
     socialMedia: [
-      { name: 'instagram', link: 'https:/....' },
-      { name: 'telegram', link: 'https:/....' },
-      { name: 'github', link: 'https:/....' },
-      { name: 'linkedin', link: 'https:/....' }
+      { name: 'instagram', link: 'https://www.instagram.com/eliseevz.design/' },
+      { name: 'telegram', link: 'https://tlgg.ru/eliseevz' },
+      { name: 'github', link: '' },
+      { name: 'linkedin', link: '' }
     ],
-    imageURL: 'http://cdn.onlinewebfonts.com/svg/img_252069.png'
+    imageURL: 'https://sun9-78.userapi.com/impg/c853620/v853620150/202815/Vo3IQu_0kf8.jpg?size=2188x2160&quality=96&sign=3381a44af98bbc5bd82935a31eefa9e5&type=album'
   },
   {
     id: 1,
@@ -46,7 +47,7 @@ export let allMembers = [
       { name: 'github', link: 'https://github.com/VasilievPavelP' },
       { name: 'linkedin', link: 'https://www.linkedin.com/in/pavel-vasiliev-680083220/' }
     ],
-    imageURL: 'http://cdn.onlinewebfonts.com/svg/img_252069.png'
+    imageURL: ''
   },
   {
     id: 2,
