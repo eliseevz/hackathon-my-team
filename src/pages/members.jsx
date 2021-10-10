@@ -8,9 +8,18 @@ import classes from "./members.module.css";
 import Breadcrumbs from "../components/Breadcrumbs/breadcrumbs";
 import OtherMembers from "../components/memberComponents/otherMembers";
 import UsersCards from "../components/Card/usersCards";
+import MemberInfo from "../components/memberComponents/memberInfo";
+import MemberSocial from "../components/memberComponents/memberSocial";
+import ProgressList from "../components/progress/progressList";
+import MemberStack from "../components/memberComponents/memberStack";
+import MemberHeader from "../components/memberComponents/memberHeader";
 import is from "is_js";
 
+
 const Members = () => {
+  const [userChoose] = useState(allMembers);
+  const params = useParams();
+  const memberId = params.memberId;
   const [userChoose, setUserChoose] = useState(allMembers)
   const params = useParams()
   const memberId = params.memberId
@@ -22,20 +31,10 @@ const Members = () => {
           <OtherMembers memberId={memberId} />
         </div>
         <div className="d-flex flex-column ml-5 w-75 justify-content-between mt-5">
-          <div className="d-flex flex-row align-items-center">
-            <h1 className={classes.members__title}>
-              {userChoose[memberId].name}
-            </h1>
-            <div className={`d-flex flex-row  ${classes.members__title}`}>
-              {userChoose[memberId].role.map((role) => (
-                <span>
-                  <Badge type={role.type} text={role.name} />
-                </span>
-              ))}
-            </div>
-            <i class="bi bi-heart" style={{ fontSize: "20px" }}></i>
+          <MemberHeader user={userChoose[memberId]} />
           </div>
           <div className="d-flex">
+            <MemberSocial user={userChoose[memberId]} />
             <div className="d-flex flex-column ">
               <img
                 // src={userChoose[memberId].imageURL}
@@ -58,7 +57,11 @@ const Members = () => {
                 })}
               </div>
             </div>
-            <div className="d-flex flex-column ms-3">
+
+            <div className="d-flex flex-column">
+              <MemberInfo user={userChoose[memberId]} />
+              <MemberStack user={userChoose[memberId]} />
+              <ProgressList user={userChoose[memberId]} />
               <span className={classes.members__info}>
                 <b>Страна:</b> {userChoose[memberId].country}
               </span>
@@ -94,6 +97,8 @@ const Members = () => {
           </div>
         </div>
       </div>
+    );
+
     )
   }
   return (
