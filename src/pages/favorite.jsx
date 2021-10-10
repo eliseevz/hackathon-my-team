@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { allMembers } from '../API/API'
 import UserCard from '../components/Card/userCard'
+import RefreshPage from "../components/favoriteComponents/refreshPage/refreshPage";
 
 const Favorite = () => {
   const [users, setUsers] = useState()
@@ -15,11 +16,16 @@ const Favorite = () => {
     if (elem !== undefined) {
       return (
         <div className='container d-flex flex-wrap mt-5'>
-          {users.map((user) => (
-            <div style={{ padding: 3, minWidth: '45vh' }} key={user.id}>
-              {user.isFavorite && <UserCard {...user} key={user.id} />}
-            </div>
-          ))}
+          <RefreshPage />
+          {users.map((user) => {
+            if(user.isFavorite) {
+              return (
+                <div style={{ padding: 3, minWidth: '45vh' }} key={user.id}>
+                    <UserCard {...user} key={user.id} />
+                </div>
+              )
+            }
+          })}
         </div>
       )
     }

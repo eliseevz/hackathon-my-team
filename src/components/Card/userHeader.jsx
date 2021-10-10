@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Badge from '../UI/badge/badge'
 import classes from './UserCard.module.css'
 import is from 'is_js'
-import FavoriteButton from '../favoriteButton/favoriteButton'
+import FavoriteButton from '../favoriteComponents/favoriteButton/favoriteButton'
 
 const UserHeader = ({ name, role, imageURL, id, isFavorite }) => {
   return (

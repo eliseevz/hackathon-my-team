@@ -32,6 +32,7 @@
   width: 234px;
   height: 234px;
   padding-right: 10px;
+  object-fit: cover;
 }
 
 .members__stack {
@@ -40,6 +41,10 @@
 
 .members__title {
   padding-right: 10px;
+}
+
+.classForFav {
+  position: relative;
 }
 
 .icons {
